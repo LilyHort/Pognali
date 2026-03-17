@@ -1,11 +1,12 @@
 extends base.pug
 include mixins/svg
+include header.pug
 
 block title
   | Погнали?
 
 block content
-  include header
+  +header()
   main
     include hero
-    include block
+    include about__service

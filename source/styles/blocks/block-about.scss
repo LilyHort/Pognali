@@ -1,0 +1,41 @@
+.block-about__title {
+    font-weight: 700;
+    font-size: 95px;
+    line-height: 45px;
+    font-variant: all-small-caps;
+
+    @media (max-width: $mobile-min) {
+        font-size: 50px;
+        line-height: 24px;
+    }
+}
+
+.block-about__text {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+
+    @media (max-width: $tablet-min) {
+        line-height: 33px;
+    }
+
+    @media (max-width: $mobile-min) {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+.block-description__text {
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 24px;
+
+    @media (max-width: $tablet-min) {
+        line-height: 25px;
+    }
+
+    @media (max-width: $mobile-min) {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}

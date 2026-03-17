@@ -1,0 +1,95 @@
+.about {
+    background-color: $special-background-about;
+    min-height: 810px;
+    border-radius: 0 0 40px 40px;
+}
+
+.about__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding: 294px 72px 162px;
+    width: 100%;
+    max-width: 770px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 293px;
+        right: -50%;
+        width: 654px;
+        height: 665px;
+        background-image: url("../../images/img-about-desktop@1x.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        pointer-events: none;
+
+        @media (min-width: $desktop-max) {
+            right: -78%;
+          }
+
+        @media (max-width: $tablet-max) {
+            background-image: url("../../images/img-about-tablet@1x.png");
+            width: 368px;
+            height: 546px;
+            right: -50%;
+
+            @media (min-resolution: 2dppx) {
+                background-image: url("../../images/img-about-tablet@2x.png");
+            }
+
+            @supports (background-image: url($webp-support)) {
+                background-image: url("../../images/img-about-tablet@1x.webp");
+            }
+
+            @media (min-resolution: 2dppx) {
+                background-image: url("../../images/img-about-tablet@2x.webp");
+            }
+          } 
+
+        // @media (min-width: $mobile-max) {
+        //     right: -50%;
+        //     background-image: url("../../images/img-about-mobile@1x.png");
+          }
+
+        @media (min-resolution: 2dppx) {
+            background-image: url("../../images/img-about-desktop@2x.png");
+        }
+
+        @supports (background-image: url($webp-support)) {
+            background-image: url("../../images/img-about-desktop@1x.webp");
+
+            @media (min-resolution: 2dppx) {
+                background-image: url("../../images/img-about-desktop@2x.webp");
+            }
+        }
+    }
+
+.about__container-text {
+    margin-bottom: 28px;
+    width: 100%;
+    max-width: 770px;
+}
+
+.about__title {
+    color: $special-white;
+    margin-bottom: 31px;
+}
+
+.about__text {
+    color: $special-white;
+    margin-bottom: 31px;
+}
+
+.about__description {
+    color: $special-white;
+    width: 100%;
+    max-width: 540px;
+    margin-bottom: 137px;
+}
+
+.about__button {
+    min-width: 284px;
+}

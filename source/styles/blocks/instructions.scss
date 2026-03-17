@@ -1,9 +1,187 @@
 .instructions__cards {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 24.5% 26.6% 26.6% 21.4%;
+    gap: 0;
+    z-index: 100;
+    padding: 0 60px;
+    align-items: stretch;
+    box-sizing: border-box;
+
+    @media (max-width: $tablet-max) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(140px, auto);
+        padding: 0 40px;
+    }
+    
+    @media (max-width: $mobile-max) {
+        grid-template-columns: 1fr;
+        grid-template-rows:
+                            minmax(90px, auto)
+                            minmax(90px, auto)
+                            minmax(90px, auto)
+                            auto;
+        padding: 0 25px;
+    }
 }
 
 .instructions__card {
+    position: relative;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    padding: 29px 52px 29px 34px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+
+    &:nth-child(1) {
+        z-index: 1;
+        background-color: $special-background-dark;
+        border-top-left-radius: $instructions-radius;
+        border-bottom-left-radius: $instructions-radius;
+        padding-right: 42px;
+    }
+
+    &:nth-child(2) {
+        z-index: 2;
+        width: calc(100% + 20px);
+        margin-left: -8px;
+        background-color: $special-blue-light;
+        border-top-left-radius: $instructions-radius;
+        border-bottom-left-radius: $instructions-radius;
+        box-shadow: $instructions-shadow;
+        padding: 29px 42px 29px 30px;
+    }
+
+    &:nth-child(3) {
+        z-index: 3;
+        width: calc(100% + 30px);
+        margin-left: -12px;
+        background-color: $basic-blue-medium;
+        border-top-left-radius: $instructions-radius;
+        border-bottom-left-radius: $instructions-radius;
+        box-shadow: $instructions-shadow;
+        padding: 29px 69px 29px 29px;
+    }
+
+    &:nth-child(4) {
+        z-index: 4;
+        width: calc(100% + 30px);
+        margin-left: -19px;
+        padding-right: 30px;
+        background-color: $special-background-light;
+        border-radius: $instructions-radius;
+        box-shadow: $instructions-shadow;
+        padding: 29px 31px 29px 28px;
+    }
+
+    @media (max-width: $tablet-max) {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        justify-content: center;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+            width: 100%;
+            margin-left: 0;
+            box-shadow: none;
+            padding: 31px 33px 20px;
+        }
+
+        &:nth-child(1),
+        &:nth-child(3) {
+            width: calc(100% + 24px);
+            margin-right: -24px;
+        }
+
+        &:nth-child(1) {
+            border-radius: $instructions-radius $instructions-radius 0 0;
+        }
+
+        &:nth-child(2) {
+            border-radius: $instructions-radius $instructions-radius 0 0;
+        }
+
+        &:nth-child(3) {
+            border-radius: 0 0 0 $instructions-radius;
+        }
+
+        &:nth-child(4) {
+            border-radius: 0 0 $instructions-radius $instructions-radius;
+        }
+    }
+
+    @media (max-width: $mobile-max) {
+        flex-direction: row;
+        padding: 0;
+        justify-content: space-between;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+            width: 100%;
+            margin-left: 0;
+            box-shadow: none;
+            padding: 22px 19px 22px 25px;
+        }
+
+        &:nth-child(1) {
+            border-radius: $instructions-radius $instructions-radius 0 0;
+        }
+
+        &:nth-child(2) {
+            border-radius: $instructions-radius $instructions-radius 0 0;
+            margin-top: -10px;
+        }
+
+        &:nth-child(3) {
+            border-radius: $instructions-radius $instructions-radius 0 0;
+            margin-top: -24px;
+        }
+
+        &:nth-child(4) {
+            border-radius: $instructions-radius;
+            margin-top: -34px;
+        }
+    }
+}
+
+.instructions__text,
+.instructions__counter {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.instructions__text {
+    color: $basic-blue;
+
+    @media (max-width: $tablet-max) {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    @media (max-width: $mobile-max) {
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+.instructions__counter {
+    color: $special-white;
+
+    @media (max-width: $tablet-max) {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    @media (max-width: $mobile-max) {
+        font-size: 18px;
+        line-height: 18px;
+    }
 }

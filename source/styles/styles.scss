@@ -4,6 +4,8 @@
 @import "./common/fonts.scss";
 
 /* BLOCKS */
+@import "./blocks/section__container.scss";
+@import "./blocks/title.scss";
 @import "./blocks/link-reset.scss";
 @import "./blocks/list-reset.scss";
 @import "./blocks/header.scss";
@@ -11,4 +13,10 @@
 @import "./blocks/nav.scss";
 @import "./blocks/social.scss";
 @import "./blocks/instructions.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/about-service.scss";
 
+
+/* MIXINS */
+@import "./blocks/block-about.scss";
+@import "./blocks/button.scss";
