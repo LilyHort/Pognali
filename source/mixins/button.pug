@@ -1,0 +1,6 @@
+include ../mixins/svg.pug
+
+mixin buttonLink(href, text, modifier)
+  div.button__wrapper(class=modifier)
+   a.button__link.link-reset(class=modifier href=href)= text
+      +icon('arrow-button', 'button__icon', 11, 13)

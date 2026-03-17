@@ -8,7 +8,6 @@
       background-color: $special-white;
       color: $basic-blue-dark;
 
-      // При открытом меню логотип в шапке скрыт — он показывается в .nav__open-header
       .header__brand {
         visibility: hidden;
       }
@@ -24,8 +23,6 @@
       .header__logo {
         color: $special-blue-dark;
       }
-
-      // Контакты при открытом меню показываются внутри навигации (.nav__contacts), не дублируем здесь
     }
   }
 }

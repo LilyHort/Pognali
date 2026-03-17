@@ -1,4 +1,4 @@
-import { readFileSync, rmSync } from 'node:fs';
+import { existsSync, readFileSync, rmSync } from 'node:fs';
 
 import { createRequire } from 'node:module';
 import gulp from 'gulp';
@@ -157,7 +157,15 @@ export function startServer () {
     ui: false,
   }, (err, bs) => {
     bs.addMiddleware('*', (req, res) => {
-      res.write(readFileSync(`${PATH_TO_DIST}404.html`));
+      const path404 = `${PATH_TO_DIST}404.html`;
+      if (existsSync(path404)) {
+        res.statusCode = 404;
+        res.write(readFileSync(path404));
+      } else {
+        res.statusCode = 404;
+        res.setHeader('Content-Type', 'text/html; charset=utf-8');
+        res.write('<!DOCTYPE html><html><head><meta charset="utf-8"><title>404</title></head><body><h1>Страница не найдена</h1><p><a href="/">На главную</a></p></body></html>');
+      }
       res.end();
     });
   });
