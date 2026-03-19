@@ -2,69 +2,74 @@
   var cards = [
     {
       name: 'Таня Фирсова',
-      image: 'img/content/user-1.jpg',
+      image: 'images/firsova-desktop@1x.png',
       tags: ['#зож', '#пп', '#фитнес', '#пляж', '#авокадо', '#смузи'],
       countries: [
-        { name: 'Шри-Ланка', flag: 'img/flags/sri-lanka.svg' },
-        { name: 'Таиланд', flag: 'img/flags/thailand.svg' },
-        { name: 'Сейшелы', flag: 'img/flags/seychelles.svg' }
+        { name: 'Шри-Ланка', flag: 'images/srilanka.svg' },
+        { name: 'Таиланд', flag: 'images/thailand.svg' },
+        { name: 'Сейшелы', flag: 'images/seyselles.svg' }
       ],
       transport: [
-        { label: 'plane', active: true },
-        { label: 'bus', active: true },
-        { label: 'bike', active: false }
+        { label: 'icon_plane', active: true },
+        { label: 'icon_bus', active: false },
+        { label: 'icon_bicycle', active: false },
+        { label: 'icon_run', active: false}
       ],
       level: 99
     },
     {
       name: 'Петя Демин',
-      image: 'img/content/user-2.jpg',
+      image: 'images/demin-desktop@1x.png',
       tags: ['#бургер', '#бар', '#футбол', '#концерт', '#крафт'],
       countries: [
-        { name: 'Бельгия', flag: 'img/flags/belgium.svg' },
-        { name: 'Чехия', flag: 'img/flags/czech.svg' }
+        { name: 'Бельгия', flag: 'images/begium.svg' },
+        { name: 'Чехия', flag: 'images/czech.svg' }
       ],
       buttonText: 'Позвать!',
       likes: 1500,
       transport: [
-        { label: 'plane', active: true },
-        { label: 'bus', active: false },
-        { label: 'bike', active: false }
+        { label: 'icon_plane', active: true },
+        { label: 'icon_bus', active: true },
+        { label: 'icon_bicycle', active: false },
+        { label: 'icon_run', active: true}
       ],
       level: 80
     },
     {
       name: 'Марк Смолов',
-      image: 'img/content/user-3.jpg',
+      image: 'images/smolov-desktop@1x.png',
       tags: ['#фронт', '#тату', '#байкер', '#кроссовки', '#стрипы'],
       countries: [
-        { name: 'США', flag: 'img/flags/usa.svg' },
-        { name: 'Австралия', flag: 'img/flags/australia.svg' },
-        { name: 'Доминика', flag: 'img/flags/dominica.svg' }
+        { name: 'США', flag: 'images/usa.svg' },
+        { name: 'Австралия', flag: 'images/australia.svg' },
+        { name: 'Доминика', flag: 'images/dominicana.svg' }
       ],
       buttonText: 'Позвать!',
       likes: 170,
       transport: [
-        { label: 'plane', active: true },
-        { label: 'bus', active: true },
-        { label: 'bike', active: true }
+        { label: 'icon_plane', active: true },
+        { label: 'icon_bus', active: false },
+        { label: 'icon_bicycle', active: true },
+        { label: 'icon_run', active: false}
       ],
       level: 25
     },
     {
       name: 'Лариса Роговая',
-      image: 'img/content/user-4.jpg',
-      tags: ['#образование', '#карьера', '#учеба', '#linkedin'],
+      active: true,
+      image: 'images/rogova-desktop@1x.png',
+      tags: ['#образование', '#карьера', '#учеба', '#линкедин'],
       countries: [
-        { name: 'Великобритания', flag: 'img/flags/uk.svg' },
-        { name: 'Германия', flag: 'img/flags/germany.svg' }
+        { name: 'Великобритания', flag: 'images/uk.svg' },
+        { name: 'Германия', flag: 'images/germany.svg' }
       ],
       buttonText: 'Позвать!',
       likes: 23,
       transport: [
-        { label: 'plane', active: true },
-        { label: 'bus', active: false },
-        { label: 'bike', active: false }
+        { label: 'icon_plane', active: true },
+        { label: 'icon_bus', active: true },
+        { label: 'icon_bicycle', active: false },
+        { label: 'icon_run', active: false}
       ],
       level: 50
     }

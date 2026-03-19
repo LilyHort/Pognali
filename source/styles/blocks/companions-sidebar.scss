@@ -1,3 +1,36 @@
 .companions-sidebar {
+  border-radius: 20px;
+  background: #CCE5FA;
+  align-self: start;
   justify-self: end;
+  padding: 46px 42px 48px 48px;
+}
+
+.companions-sidebar__title {
+  display: block;
+  text-align: center;
+  color: #1D2E5B;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 34px;
+}
+
+.companions-sidebar__group {
+  border: none;
+}
+
+.companions-sidebar__group-title {
+  color:  #1D2E5B;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.companions-sidebar__text {
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
 }
