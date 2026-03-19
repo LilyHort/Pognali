@@ -12,7 +12,7 @@ mixin companionCard(card)
       if card.name || (card.tags && card.tags.length)
         .companion-card__info
           if card.name
-            h2.companion-card__name= card.name
+            h2.companion-card__name(class={ 'is-active': card.active })= card.name
 
           if card.tags && card.tags.length
             ul.companion-card__tags.list-reset
@@ -40,6 +40,13 @@ mixin companionCard(card)
           if card.likes != null
             .companion-card__likes
               span.companion-card__likes-icon
+                svg.companion-card__likes-svg(
+                      width='20'
+                      height='20'
+                      aria-hidden='true'
+                      )
+                      use(href=`icons/stack.svg#icon_heart`)
+
               span.companion-card__likes-count= card.likes
 
       if (card.transport && card.transport.length) || card.level != null
@@ -48,14 +55,36 @@ mixin companionCard(card)
             ul.companion-card__transport.list-reset
               each item in card.transport
                 li.companion-card__transport-item
-                  button.companion-card__transport-button(
+                  span.companion-card__transport-button(
                     class={ 'is-active': item.active }
-                    type='button'
                     aria-label=item.label
                   )
-                    span.companion-card__transport-icon= item.label
+                    svg.companion-card__transport-icon(
+                      width='25'
+                      height='25'
+                      aria-hidden='true'
+                    )
+                      use(href=`icons/stack.svg#${item.label}`)
 
           if card.level != null
-            .companion-card__level
-              span.companion-card__level-value= card.level
-              span.companion-card__level-text level
+            .companion-card__level(data-level=card.level)
+              svg.companion-card__level-svg(
+                width='60'
+                height='60'
+                viewBox='0 0 60 60'
+                aria-hidden='true'
+              )
+                circle.companion-card__level-bg(
+                  cx='30'
+                  cy='30'
+                  r='28'
+                )
+                circle.companion-card__level-progress(
+                  cx='30'
+                  cy='30'
+                  r='28'
+                )
+
+              .companion-card__level-content
+                span.companion-card__level-value= card.level
+                span.companion-card__level-text level

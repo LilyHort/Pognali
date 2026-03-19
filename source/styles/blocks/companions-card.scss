@@ -5,12 +5,14 @@
 
 .companion-card__content {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
     "info countries"
     "footer meta";
   background-color: #fff;
   padding: 46px 43px 42px 62px;
+  border-top-right-radius: 20px;
+  border-end-end-radius: 20px;
 }
 
 .companion-card__image-wrapper > img {
@@ -21,7 +23,8 @@
 
 .companion-card__footer {
   display: flex;
-  gap: 16px;
+  gap: 4px;
+  align-items: center;
 }
 
 .companion-card__actions {
@@ -33,14 +36,196 @@
 .companion-card__meta {
   display: flex;
   grid-column: 2 / 3;
-  justify-self: end;
   align-items: center;
-  gap: 14px;
-  margin-left: auto;
+  gap: 70px;
 }
 
 .companion-card__transport {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.companion-card__tags {
+  display: flex;
+  gap: 5px;
+  width: 226px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.companion-card__tag {
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.companion-card__countries {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.companion-card__country {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.companion-card__country-name {
+  color: #1D2E5B;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.companion-card__name {
+  position: relative;
+  color: #1D2E5B;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 100%;
+    left: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.companion-card__name.is-active {
+  &:before {
+    background-color: green;
+  }
+}
+
+.companion-card__transport-icon {
+  display: flex;
+  color: #1D2E5B;
+  opacity: 0.15;
+}
+
+.companion-card__transport-button.is-active .companion-card__transport-icon {
+  opacity: 1;
+}
+
+
+.companion-card__level-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 34px; /* ровно под линию */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.companion-card__level-value {
+  position: relative;
+  color:  #1D2E5B;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+
+  &:after {
+    content: '';
+    width: 34px;
+    height: 1px;
+    position: absolute;
+    background-color: #000;
+    opacity: 0.1;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.companion-card__level-text {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  opacity: 0.4;
+}
+
+.companion-card__level {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.companion-card__level-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.companion-card__level-bg,
+.companion-card__level-progress {
+  fill: none;
+  stroke-width: 2;
+}
+
+.companion-card__level-bg {
+  stroke: #ffffff;
+}
+
+.companion-card__level-progress {
+  stroke: #58A7E4;
+  stroke-linecap: round;
+}
+
+
+.companion-card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color:  #161C35;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-family: inherit;
+  border-radius: 25px;
+  background: #A8D2F4;
+  padding: 17px 27px;
+  height: 50px;
+}
+
+.companion-card__likes {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.companion-card__likes-icon {
+  width: 50px;
+  height: 50px;
+  background-color:#E2E5F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.companion-card__likes-count {
+  color:#161C35;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
 }
