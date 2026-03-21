@@ -5,15 +5,15 @@ include mixins/button.pug
 section.fellow-travelers
     div.section__container
         .fellow-travelers__wrapper
-            +blockAbout(
-                'Попутчики',
-                'Все мы индивидувльны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктель, а другому маршрут для хайкинга.',
-                'fellow-travelers__title',
-                'fellow-travelers__text',
-                'fellow-travelers__container-text'
-            )
-            +blockDescription('Теперь можно легко найти единомышленников!')
-            +buttonLink('#', 'Показать всех', 'fellow-travelers__button-container')
-
-
+            .fellow-travelers__container-text
+                +blockAbout(
+                    'Попутчики',
+                    'Все мы индивидувльны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктель, а другому маршрут для хайкинга.',
+                    'fellow-travelers__title',
+                    'fellow-travelers__text'
+                )
+                +blockDescription('Теперь можно легко найти единомышленников!')
+                +buttonLink('#', 'Показать всех', 'fellow-travelers__button-container')
+            .fellow-travelers__container-cards
+                include fellow-travelers-cards
             

@@ -1,0 +1,90 @@
+.profile__title {
+    font-size: 95px;
+    line-height: 45px;
+    font-weight: 700;
+    font-variant: all-small-caps;
+    color: $special-blue-dark;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.profile__container {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.profile__info {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.profile__list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    align-items: start;
+
+    .profile__item:nth-child(1) .profile__number {
+        background-color: $special-background-dark;
+    }
+
+    .profile__item:nth-child(2) .profile__number {
+        background-color: $special-blue-light;
+    }
+
+    .profile__item:nth-child(3) .profile__number {
+        background-color: $basic-blue-medium;
+    }
+}
+
+.profile__view {
+    display: flex;
+    gap: 25px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile__number {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 28px;
+    color: $special-white;
+    width: 73px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $basic-grey-light;
+}
+
+.profile__text {
+    font-size: 28px;
+    line-height: 28px;
+    color: $special-grey;
+}
+
+.profile__link-icon {
+    background-image: url("../../icons/button-profile-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 29px 28px;
+}
+
+.profile__link-text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: $special-blue-darkest;
+}
+
+.profile__price {
+    background-color: $special-background-fellow-travelers;
+}
+
+
+.profile__price-title {
+
+}
