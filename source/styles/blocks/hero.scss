@@ -34,7 +34,10 @@ $webp-support: 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAA
     @media (max-width: $mobile-max) {
         background-image: url("../../images/hero-background-mobile@1x.png");
         background-position: 0px -88px;
-        height: 538px;
+        max-height: 538px;
+        min-height: 538px;
+        z-index: 100;
+        border-radius: 0;
 
         @media (min-resolution: 2dppx) {
             background-image: url("../../images/hero-background-mobile@2x.png");

@@ -1,0 +1,158 @@
+// Стили “по образцу” `direction.scss` для секции попутчиков.
+$fellow-travelers-desktop-aside-inline: clamp(77px, 4.8vw + 28px, 97px);
+
+.fellow-travelers {
+    position: relative;
+    z-index: 0;
+
+    @media (max-width: $tablet-max) {
+        margin-top: -40px;
+    }
+
+    @media (max-width: $mobile-max) {
+        margin-top: -50px;
+    }
+}
+
+.fellow-travelers__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media (max-width: $tablet-max) {
+        background-color: $basic-grey;
+    }
+
+    @media (max-width: $mobile-max) {
+        padding-bottom: 54px;
+    }
+}
+
+// В `fellow-travelers.pug` блок About — это div.block-about__container-text (и только он
+// должен получить “direction__container-text” геометрию).
+.block-about__container-text.fellow-travelers__container-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    align-self: stretch;
+    min-width: 0;
+    margin-top: 101px;
+    margin-right: 88px;
+    margin-bottom: 3px;
+    margin-left: $fellow-travelers-desktop-aside-inline;
+    text-align: start;
+    gap: 156px;
+
+    @media (max-width: $tablet-max) {
+        margin:
+            34px
+            clamp(16px, 9vw + 44px, 73px)
+            clamp(4px, 0.8vw + 4px, 10px)
+            clamp(16px, 5.5vw + 31px, 73px);
+    }
+
+    @media (max-width: $mobile-max) {
+        margin: 92px auto 84px;
+        padding: 0 25px;
+    }
+}
+
+.fellow-travelers__title {
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 45px;
+    font-variant: all-small-caps;
+    color: $special-blue-darkest;
+    margin-bottom: clamp(20px, 1.5vw + 14px, 32px);
+
+    @media (max-width: $tablet-max) {
+        font-size: clamp(3rem, 9vw + 2rem, 5.9375rem);
+        line-height: 1.05;
+        margin-bottom: 27px;
+    }
+
+    @media (max-width: $mobile-max) {
+        font-size: clamp(2rem, 9vw + 1rem, 2.75rem);
+        line-height: 1.1;
+        margin-bottom: 12px;
+    }
+}
+
+.block-about__title.fellow-travelers__title {
+    font-weight: 700;
+    font-size: 75px;
+    line-height: 45px;
+    font-variant: all-small-caps;
+    color: $special-blue-darkest;
+
+    @media (max-width: $tablet-max) {
+        font-size: clamp(3rem, 9vw + 2rem, 5.9375rem);
+        line-height: 1.05;
+    }
+
+    @media (max-width: $mobile-max) {
+        font-size: clamp(2rem, 9vw + 1rem, 2.75rem);
+        line-height: 1.1;
+    }
+}
+
+.block-about__text.fellow-travelers__text {
+    color: $special-grey;
+    font-size: 23px;
+    line-height: 33px;
+
+    @media (max-width: $tablet-max) {
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    @media (max-width: $mobile-max) {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    // Если позже добавите break-точки для текста — этот класс их скроет на mobile.
+    .fellow-travelers__text-break {
+        @media (max-width: $mobile-max) {
+            display: none;
+        }
+    }
+}
+
+.button__wrapper.fellow-travelers__button-container {
+    align-self: flex-start;
+    position: relative;
+    z-index: 2;
+    width: fit-content;
+    max-width: 100%;
+    min-width: min(100%, 298px);
+    box-sizing: border-box;
+    margin-left: $fellow-travelers-desktop-aside-inline;
+    margin-right: 88px;
+    transform: translateX(8px);
+
+    @media (max-width: $tablet-max) {
+        margin-left: 0;
+        margin-right: 0;
+        margin-inline: auto;
+        align-self: center;
+        margin-top: -102px;
+    }
+
+    @media (max-width: $tablet-max) {
+        display: block;
+        width: 100%;
+        max-width: 81%;
+        min-width: 0;
+        justify-self: stretch;
+        margin-inline: auto;
+        transform: none;
+    }
+
+    @media (max-width: $mobile-max) {
+        margin-top: 0;
+        max-width: 84%;
+    }
+}
+

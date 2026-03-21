@@ -131,21 +131,21 @@
         }
 
         &:nth-child(1) {
-            border-radius: $instructions-radius $instructions-radius 0 0;
+            border-radius: 7px 7px 0 0;
         }
 
         &:nth-child(2) {
-            border-radius: $instructions-radius $instructions-radius 0 0;
+            border-radius: 7px 7px 0 0;
             margin-top: -10px;
         }
 
         &:nth-child(3) {
-            border-radius: $instructions-radius $instructions-radius 0 0;
+            border-radius: 7px 7px 0 0;
             margin-top: -24px;
         }
 
         &:nth-child(4) {
-            border-radius: $instructions-radius;
+            border-radius: 7px;
             margin-top: -34px;
         }
     }
