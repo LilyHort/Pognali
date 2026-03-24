@@ -10,8 +10,9 @@
   gap: 369px;
   align-items: center;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     gap: 88px;
+    padding: 44px 0 37px;
   }
 
   @media(max-width: 767px) {
@@ -23,9 +24,16 @@
 
 .footer__logo {
   display: block;
+
+  @media(max-width: 1350px) {
+    width: 166px;
+    height: 42px;
+  }
+
   @media(max-width: 767px) {
     display: none;
   }
+
   &--mobile {
     display: none;
 

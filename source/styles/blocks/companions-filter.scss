@@ -1,9 +1,9 @@
 .companions-filter {
-  padding: 58px 0 48px;
+  padding: 60px 0 48px;
   background-color: transparent;
 
-  @media(max-width: 1023px) {
-    padding: 99px 12px 59px 32px;
+  @media(max-width: 1350px) {
+    padding: 108px 12px 59px 32px;
     background-color: #E2E5F2;
     transform: translateY(-45px);
     border-bottom-right-radius: 50px;
@@ -23,7 +23,11 @@
 .companions-filter__top {
   display: flex;
   align-items: center;
-  gap: 5px;
+  padding-left: 21px;
+
+  @media(max-width: 1350px) {
+    padding-left: 0;
+  }
 
   @media(max-width: 767px) {
     align-items: center;
@@ -32,7 +36,7 @@
 }
 
 .companion__filter__show-icon {
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     width: 33px;
     height: 6px;
   }
@@ -72,10 +76,10 @@
 .companions-filter__tabs-list {
   display: flex;
   list-style-type: none;
-  gap: 23px;
+  gap: 17px;
 
-  @media(max-width: 1023px) {
-    gap: 19px;
+  @media(max-width: 1350px) {
+    gap: 14px;
   }
 
   @media(max-width: 767px) {
@@ -87,7 +91,7 @@
 
 .companions-filter__toggle {
   display: flex;
-  gap: 22px;
+  gap: 16px;
   align-items: center;
   border: none;
   background-color: transparent;
@@ -97,13 +101,13 @@
   line-height: 19px;
   text-transform: uppercase;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     display: none;
   }
 
   @media(max-width: 767px) {
     display: flex;
-    gap: 11px;
+    gap: 15px;
     font-size: 15px;
     line-height: 18px;
     align-items: flex-start;
@@ -135,7 +139,7 @@
 .companions-filter__countries {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 40px 20px;
+  row-gap: 40px;
 
   @media (max-width: 1023px) {
     display: block;
@@ -150,7 +154,7 @@
   line-height: 60px;
   text-transform: uppercase;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     display: none;
   }
 }
@@ -158,6 +162,7 @@
 .companions-filter__list {
   display: flex;
   flex-direction: column;
+  max-width: 208px;
 }
 
 .companions-filter__link {
@@ -214,7 +219,7 @@
 .companions-filter__letters-nav {
   display: none;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 35px;
@@ -232,7 +237,7 @@
 .companions-filter__region.is-active {
   display: block;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     display: grid;
     grid-template-columns: 345px 156px;
     gap: 100px;
@@ -252,11 +257,11 @@
 }
 
 .companions-filter.is-expanded .companions-filter__body {
-  padding: 74px 0 102px;
+  padding: 75px 0 102px 37px;
   max-height: 2000px;
   opacity: 1;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     padding: 62px 0 27px;
   }
 
@@ -283,8 +288,8 @@
   background-color: transparent;
   cursor: pointer;
 
-  @media(max-width: 1023px) {
-    margin-left: 34px;
+  @media(max-width: 1350px) {
+    margin-left: 53px;
   }
 
   @media(max-width: 767px) {
@@ -299,7 +304,7 @@
 .companions-filter.is-expanded .companions-filter__show {
   display: none;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     display: flex;
     align-items: center;
   }
@@ -323,13 +328,13 @@
 }
 
 .companions-filter__group {
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     display: none;
   }
 }
 
 .companions-filter__group.is-active {
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     display: block;
   }
 }
@@ -347,7 +352,7 @@
 }
 
 .companions-filter__letters-button {
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     font-family: inherit;
     background-color: transparent;
     border: none;
@@ -370,7 +375,7 @@
 }
 
 .companions-filter__letters-button.is-active{
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     opacity: 1;
   }
 
@@ -387,7 +392,15 @@
 }
 
 .companions-filter__toggle > span {
+  color: #192144;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+
   @media(max-width: 767px) {
     text-align: start;
+    font-size: 15px;
+    line-height: 18px;
   }
 }

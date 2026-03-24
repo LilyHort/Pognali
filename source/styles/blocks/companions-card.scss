@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 285px 1fr;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     grid-template-columns: 1fr;
   }
 
@@ -14,14 +14,14 @@
 .companion-card__content-image {
   display: none;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     display: flex;
     grid-column: 1 / 2;
     grid-row: 1 / 4;
   }
 
   &--tablet {
-    @media(max-width: 1023px) {
+    @media(max-width: 1350px) {
       border-top-right-radius: 13px;
       border-end-end-radius: 13px;
     }
@@ -31,19 +31,22 @@
 .companion-card__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+  row-gap: 22px;
   grid-template-areas:
     "info countries"
     "footer meta";
   background-color: #fff;
-  padding: 46px 43px 42px 62px;
+  padding: 48px 0 36px 62px;
   border-top-right-radius: 20px;
   border-end-end-radius: 20px;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     padding: 33px 25px 25px 35px;
     border-radius: 20px;
     grid-template-columns: 1fr 260px 1fr;
-    column-gap: 30px;
+    column-gap: 35px;
+    row-gap: 0;
     grid-template-areas: 
     "image info meta"
     "image footer meta"
@@ -52,14 +55,14 @@
 }
 
 .companion-card__info {
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     grid-column: 2 / 3;
     grid-row: 1/2;
   }
 }
 
 .companion-card__image-wrapper {
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     display: none;
   }
 }
@@ -72,10 +75,11 @@
 
 .companion-card__footer {
   display: flex;
-  gap: 4px;
   align-items: center;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
+    margin-top: 15px;
+    gap: 2px;
     grid-column: 2 / 2;
     grid-row: 4 / 2
   }
@@ -91,13 +95,13 @@
   display: flex;
   grid-column: 2 / 3;
   align-items: center;
-  gap: 70px;
+  gap: 50px;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     flex-direction: column;
     grid-column: 3 / 4;
     grid-row: -4 / -1;
-    gap: 12px;
+    gap: 13px;
     justify-self: end;
   }
 }
@@ -107,7 +111,7 @@
   align-items: center;
   gap: 8px;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     flex-direction: column;
     gap: 11px;
   }
@@ -115,13 +119,14 @@
 
 .companion-card__tags {
   display: flex;
-  gap: 5px;
+  column-gap: 11px;
   width: 226px;
   flex-wrap: wrap;
   margin-top: 20px;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     margin-top: 19px;
+    column-gap: 12px;
   }
 }
 
@@ -135,19 +140,19 @@
 .companions-card__block-title {
   display: none;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     position: relative;
     z-index: 2;
     display: block;
     width: 131px;
-    margin-left: 49px;
+    margin-left: 39px;
     background-color: #fff;
     text-align: center;
   }
 }
 
 .companions-card__block {
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -166,7 +171,7 @@
     position: absolute;
     top: 10px;
 
-    @media(max-width: 1023px) {
+    @media(max-width: 1350px) {
       display: block;
     }
   }
@@ -177,7 +182,7 @@
   flex-direction: column;
   gap: 14px;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     flex-direction: row;
     gap: 11px;
   }
@@ -188,8 +193,8 @@
   gap: 18px;
   align-items: center;
 
-  @media(max-width: 1023px) {
-    gap: 12px;
+  @media(max-width: 1350px) {
+    gap: 14px;
   }
 }
 
@@ -202,7 +207,7 @@
 }
 
 .companion-card__heading {
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     display: flex;
     gap: 22px;
     align-items: center;
@@ -224,11 +229,11 @@
     height: 8px;
     background-color: red;
     border-radius: 100%;
-    left: -18px;
+    left: -26px;
     top: 50%;
     transform: translateY(-50%);
 
-    @media(max-width: 1023px) {
+    @media(max-width: 1350px) {
       display: none;
     }
   }
@@ -241,7 +246,7 @@
   background-color: red;
   border-radius: 100%;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     display: block;
   }
 }
@@ -262,7 +267,7 @@
   opacity: 0.15;
 
   @media(max-width: 767px) {
-    width: 14px;
+    width: 16px;
     height: 16px;
   }
 }
@@ -353,7 +358,7 @@
   stroke: #58A7E4;
   stroke-linecap: round;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     stroke: #FF8D30;
   }
 }
@@ -375,12 +380,19 @@
   padding: 17px 27px;
   height: 50px;
   cursor: pointer;
+
+  @media(max-width: 1350px) {
+    padding: 17px 37px;
+  }
 }
 
 .companion-card__likes {
   display: flex;
-  gap: 3px;
   align-items: center;
+
+  @media(max-width: 1350px) {
+    gap: 5px;
+  }
 }
 
 .companion-card__likes-icon {
@@ -400,4 +412,11 @@
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+.companion-card__country-flag {
+  @media(max-width: 1350px) {
+    width: 40px;
+    height: 24px;
+  }
 }

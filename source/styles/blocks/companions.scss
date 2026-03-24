@@ -1,21 +1,22 @@
 .companions {
   padding-bottom: 77px;
 
-  @media(max-width: 1023px) {
-    padding: 200px 0 62px;
+  @media(max-width: 1350px) {
+    padding: 184px 0 62px;
   }
 
   @media(max-width: 767px) {
-    padding: 89px 0 46px;
+    padding: 76px 0 46px;
   }
 }
 
 .companions__wrapper {
   display: grid;
   grid-template-columns: 1fr 285px;
-  gap: 85px;
+  column-gap: 85px;
+  row-gap: 67px;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     grid-template-columns: 1fr;
     gap: 0;
   }
@@ -26,7 +27,7 @@
   flex-direction: column;
   gap: 30px;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     order: 2;
     gap: 39px;
     margin-bottom: 46px;
@@ -52,8 +53,8 @@
   margin-bottom: 73px;
   cursor: pointer;
 
-  @media(max-width: 1023px) {
-    margin-bottom: 56px;
+  @media(max-width: 1350px) {
+    margin-bottom: 52px;
   }
 
   @media(max-width: 767px) {
@@ -125,7 +126,7 @@
   background: #4f7dbb;
   border-radius: 100%;
 
-  @media(max-width: 1023px) {
+  @media(max-width: 1350px) {
     background-color: #A8D2F4;
   }
 }
@@ -133,8 +134,8 @@
 .companions__arrows {
   position: absolute;
   display: flex;
-  gap: 29px;
-  right: 41px;
+  gap: 24px;
+  right: 36px;
   top: 50%;
   transform: translateY(-50%);
 
@@ -174,7 +175,9 @@
 }
 
 .companion__more-icon {
-  width: 18px;
-  height: 18px;
+  @media(max-width: 767px) {
+    width: 18px;
+    height: 18px;
+  }
 }
 

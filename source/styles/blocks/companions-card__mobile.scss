@@ -30,7 +30,7 @@
   display: grid;
   grid-template-columns: 70px 1fr;
   column-gap: 16px;
-  row-gap: 13px;
+  row-gap: 8px;
 }
 
 .companion-card__mobile-right {
@@ -111,12 +111,13 @@
 .companion-card__mobile-block {
   position: relative;
   margin-bottom: 15px;
+  margin-left: 7px;
 }
 
 .companion-card__mobile-block-title {
   position: relative;
   display: inline-block;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   padding-right: 12px;
   background-color: #fff;
   color: #444;
@@ -159,7 +160,7 @@
 .companion-card__mobile-country {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 13px;
 }
 
 .companion-card__mobile-meta {
@@ -252,4 +253,17 @@
 .companion-card__button--mobile {
   width: 100%;
   height: 40px;
+}
+
+.companion-card__mobile-country-name {
+  color: #1D2E5B;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.companion-card__mobile-country-flag {
+  width: 26px;
+  height: 18px;
 }
