@@ -3,7 +3,7 @@
     z-index: 0;
     isolation: isolate;
     border-radius: 0 0 51px 0;
-    padding: 138px 20px 169px 0px;
+    padding: 138px 53px 169px 0px;
     margin-top: -43px;
     margin-bottom: -10px;
 
@@ -28,6 +28,10 @@
         border-radius: 0 0 51px 0;
         pointer-events: none;
         z-index: -2;
+    }
+
+    @media (max-width: 1350px) {
+        padding: 138px 20px 169px 0px;
     }
 
     @media (max-width: $tablet-max) {
@@ -95,7 +99,7 @@
     flex-direction: column;
     gap: 10px;
     margin: 0;
-    padding: 0 23px;
+   // padding: 0 23px;
     list-style: none;
 
     &::before,

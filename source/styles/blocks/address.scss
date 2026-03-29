@@ -54,6 +54,7 @@
 
   @media (max-width: $mobile-max) {
     margin-left: 0;
+    gap: 14px;
   }
 }
 
@@ -95,7 +96,7 @@
   }
 
   @media (max-width: $mobile-max) {
-    width: 45px;
+    width: 62px;
     height: 45px;
 
     &::before {

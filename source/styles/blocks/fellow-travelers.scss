@@ -25,7 +25,7 @@ $fellow-travelers-card-width-mobile: 270px;
         "aside cards"
         "button cards";
     padding-left: 10px;   
-    margin-bottom: 120px; 
+    margin-bottom: 125px; 
 
     @media (max-width: 1330px) {
         grid-template-columns: minmax(0, 1fr);

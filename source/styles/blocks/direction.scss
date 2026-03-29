@@ -15,7 +15,7 @@ $direction-desktop-aside-inline: clamp(77px, 4.8vw + 28px, 97px);
     }
 
     @media (max-width: $tablet-max) {
-        margin-top: 80px;
+        margin-top: 36px;
         background-color: $basic-grey;
         border-radius: 0 0 60px 60px;
         z-index: 1;
@@ -27,7 +27,7 @@ $direction-desktop-aside-inline: clamp(77px, 4.8vw + 28px, 97px);
 }
 
 .direction__wrapper {
-    margin-top: -45px;
+    margin-top: -2px;
     display: grid;
     grid-template-columns: minmax(0, 52%) minmax(0, 1fr);
     column-gap: clamp(8px, 0.8vw + 4px, 20px);
@@ -102,7 +102,13 @@ $direction-desktop-aside-inline: clamp(77px, 4.8vw + 28px, 97px);
    @media (max-width: $tablet-max) {
       z-index: 0;
       margin-bottom: 54px;
+      padding: 0 23px;
    }
+
+    @media (max-width: $mobile-max) {
+        padding: 0;
+        margin-bottom: 2px;
+    }
 }
 
 .direction__title { 

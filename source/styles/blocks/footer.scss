@@ -2,6 +2,19 @@
   background-color: #fff;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  box-shadow: 0 -6px 24px rgba(16, 29, 65, 0.12);
+
+  &--index {
+    position: relative;
+    z-index: 1;
+    margin-top: -73px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    @media (max-width: $tablet-max) {
+      margin-top: -49px;
+    }
+  }
 }
 
 .footer__wrapper {
@@ -33,6 +46,7 @@
   @media(max-width: 767px) {
     display: none;
   }
+
 
   &--mobile {
     display: none;
