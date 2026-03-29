@@ -1,0 +1,8 @@
+.main-index {
+    position: relative;
+    z-index: 0;
+
+    @media (max-width: $tablet-max) {
+        background-color: $basic-grey;
+    }
+}

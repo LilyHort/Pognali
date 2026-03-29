@@ -55,7 +55,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 99;
+    // Должно перекрывать `header`/`hero` на мобилке (у них z-index: 100)
+    z-index: 101;
     background-color: $special-white;
     display: flex;
     flex-direction: column;
@@ -153,3 +154,13 @@
     right: 0;
   }
 }
+
+.nav__item {
+    &:hover {
+      color: $hover-color;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
